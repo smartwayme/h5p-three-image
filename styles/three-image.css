@@ -3,7 +3,7 @@
 .nav-button {
   background: rgba(0,0,0,1);
   color: greenyellow;
-  padding: 0.05em 0.55em;
+  padding: 0.5em;
   font-size: 3em;
   cursor: pointer;
 }
@@ -11,7 +11,7 @@
 .image-button {
   background: rgba(0,0,0,1);
   color: dodgerblue;
-  padding: 0.05em 0.55em;
+  padding: 0.5em;
   font-size: 3em;
   cursor: pointer;
 }

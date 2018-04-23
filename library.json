@@ -9,6 +9,9 @@
   "patchVersion": 0,
   "runnable": 1,
   "fullscreen": 1,
+  "embedTypes": [
+    "iframe"
+  ],
   "coreApi": {
     "majorVersion": 1,
     "minorVersion": 14
