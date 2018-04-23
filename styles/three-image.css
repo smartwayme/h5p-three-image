@@ -1,15 +1,35 @@
 .h5p-three-image {
 }
-.tim {
-  padding: 0.5em 1em;
-  background: rgba(0,0,0,0.8);
-  color: #BadA55;
+.nav-button {
+  background: rgba(0,0,0,1);
+  color: greenyellow;
+  padding: 0.05em 0.55em;
+  font-size: 3em;
+  cursor: pointer;
 }
-.debug-text {
+
+.image-button {
+  background: rgba(0,0,0,1);
+  color: dodgerblue;
+  padding: 0.05em 0.55em;
+  font-size: 3em;
+  cursor: pointer;
+}
+
+.h5p-image-popup {
   position: absolute;
-  bottom: 0;
+  height: 100%;
+  width: 100%;
   left: 0;
-  color: blue;
-  background: rgba(255,255,255,0.75);
-  padding: 2px 4px;
+  top: 0;
+}
+
+.h5p-close-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  color: white;
+  padding: 0.5em;
+  cursor: pointer;
 }

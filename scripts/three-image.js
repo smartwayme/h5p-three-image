@@ -26,33 +26,85 @@ H5P.ThreeImage = (function (EventDispatcher, ThreeSixty) {
     var createElements = function () {
       // Create wrapper
       wrapper = document.createElement('div');
+      wrapper.classList.add('h5p-three-sixty-wrapper');
 
       // Create source image
-      var image = document.createElement('img');
-      image.addEventListener('load', imageLoaded);
-      image.src = H5P.getPath(parameters.file.path, contentId);
+      initSceneFromImage(H5P.getPath(parameters.file.path, contentId), function (scene) {
+        var firstSceneNavButton1 = document.createElement('div');
+        firstSceneNavButton1.classList.add('nav-button');
+        firstSceneNavButton1.innerText = '+';
+        firstSceneNavButton1.addEventListener('click', function () {goToScene(self.secondScene)});
+        scene.add(firstSceneNavButton1, {yaw: -5.290342653589794, pitch: 0.25875}, false);
+
+        // Initial setup of scenes
+        var firstScene = scene;
+        wrapper.appendChild(firstScene.element);
+        scene.resize();
+        threeSixty = scene;
+        threeSixty.startRendering();
+        self.firstScene = scene;
+      });
+
+      initSceneFromImage(H5P.getPath(parameters.file2.path, contentId), function (scene) {
+        var secondScene = scene;
+
+        var secondSceneNavButton1 = document.createElement('div');
+        secondSceneNavButton1.classList.add('nav-button');
+        secondSceneNavButton1.innerText = '+';
+        secondSceneNavButton1.addEventListener('click', function () {goToScene(self.firstScene)});
+        secondScene.add(secondSceneNavButton1, {yaw: -5.254092653589793, pitch: -0.39875}, false);
+
+        var secondSceneImageButton = document.createElement('div');
+        secondSceneImageButton.classList.add('image-button');
+        secondSceneImageButton.innerText = '+';
+        secondSceneImageButton.addEventListener('click', function () {
+          var img = document.createElement('img');
+          img.classList.add('h5p-image-popup');
+          img.src = H5P.getPath(parameters.file2image1.path, contentId);
+          wrapper.appendChild(img);
+
+          var closeButton = document.createElement('div');
+          closeButton.classList.add('h5p-close-button');
+          closeButton.innerText = 'X';
+          wrapper.appendChild(closeButton);
+
+          closeButton.addEventListener('click', function () {
+            wrapper.removeChild(img);
+            wrapper.removeChild(closeButton);
+          });
+        });
+        secondScene.add(secondSceneImageButton, {yaw: -8.456592653589793, pitch: -0.04}, false);
+
+        self.secondScene = secondScene;
+      });
+      initSceneFromImage(H5P.getPath(parameters.file3.path, contentId), function (scene) {
+        self.thirdScene = scene;
+      });
     };
 
-    /**
-     * Callback for handling the image loaded event.
-     *
-     * @private
-     */
-    var imageLoaded = function () {
-      threeSixty = new H5P.ThreeSixty(this, 16 / 9);
-      wrapper.appendChild(threeSixty.element);
-      threeSixty.resize();
+    var goToScene = function (scene) {
+      // Remove all children
+      while(wrapper.firstChild) {
+        wrapper.removeChild(wrapper.firstChild);
+      }
+      self.firstScene.stopRendering();
+      self.secondScene.stopRendering();
+      self.thirdScene.stopRendering();
 
-      var tim = document.createElement('div');
-      tim.classList.add('tim');
-      tim.innerText = 'This is Tim!';
+      // Append new scene
+      wrapper.appendChild(scene.element);
+      scene.resize();
+      scene.startRendering();
+      threeSixty = scene;
+    };
 
-      var head = document.createElement('img');
-      head.classList.add('head');
-      head.src = 'tim.png';
-
-      threeSixty.add(tim, {yaw: -3.2303426535897932, pitch: 0.1375}, true);
-      threeSixty.add(head, {yaw: -3.201592653589793, pitch: 0.028749999999999994}, true);
+    var initSceneFromImage = function (imagePath, callback) {
+      var imageElement = document.createElement('img');
+      imageElement.addEventListener('load', function () {
+        var scene = new H5P.ThreeSixty(this, 16/9);
+        callback(scene);
+      });
+      imageElement.src = imagePath;
     };
 
     /**

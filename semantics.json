@@ -4,5 +4,23 @@
     "type": "image",
     "label": "Sphere Image",
     "importance": "high"
+  },
+  {
+    "name": "file2",
+    "type": "image",
+    "label": "Sphere Image 2",
+    "importance": "high"
+  },
+  {
+    "name": "file3",
+    "type": "image",
+    "label": "Sphere Image 3",
+    "importance": "high"
+  },
+  {
+    "name": "file2image1",
+    "type": "image",
+    "label": "Normal image for scene 2",
+    "importance": "high"
   }
 ]
