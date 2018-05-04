@@ -1,2 +1,10 @@
-<?xml version="1.0" standalone="no"?>
-<svg version="1.1" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="ng-element" data-id="72ee78daf345492c9b2ed0a77a39643d" style="fill: rgb(0, 0, 0); width: 24px; height: 24px; pointer-events: all; filter: none;" xmlns="http://www.w3.org/2000/svg"><g><path xmlns:default="http://www.w3.org/2000/svg" id="plus" d="M19.33,11c0-0.55-0.45-1-1-1H14V5.67c0-0.55-0.45-1-1-1h-2c-0.55,0-1,0.45-1,1V10H5.67c-0.55,0-1,0.45-1,1v2  c0,0.55,0.45,1,1,1H10v4.33c0,0.55,0.45,1,1,1h2c0.55,0,1-0.45,1-1V14h4.33c0.55,0,1-0.45,1-1V11L19.33,11z" style="fill: rgb(0, 0, 0);"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54 48" style="enable-background:new 0 0 54 48;" xml:space="preserve">
+<g>
+	<path id="plus" xmlns:default="http://www.w3.org/2000/svg" d="M50.5,20.8c0-1.8-1.4-3.2-3.2-3.2H33.4V3.7c0-1.8-1.4-3.2-3.2-3.2
+		h-6.4c-1.8,0-3.2,1.4-3.2,3.2v13.9H6.7c-1.8,0-3.2,1.4-3.2,3.2v6.4c0,1.8,1.4,3.2,3.2,3.2h13.9v13.9c0,1.8,1.4,3.2,3.2,3.2h6.4
+		c1.8,0,3.2-1.4,3.2-3.2V30.4h13.9c1.8,0,3.2-1.4,3.2-3.2V20.8L50.5,20.8z"/>
+</g>
+</svg>
