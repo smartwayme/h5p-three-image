@@ -1,26 +1,68 @@
 [
   {
-    "name": "file",
+    "name": "sphere",
     "type": "image",
     "label": "Sphere Image",
     "importance": "high"
   },
   {
-    "name": "file2",
+    "name": "sphere2",
     "type": "image",
     "label": "Sphere Image 2",
     "importance": "high"
   },
   {
-    "name": "file3",
+    "name": "sphere3",
     "type": "image",
     "label": "Sphere Image 3",
     "importance": "high"
   },
   {
-    "name": "file2image1",
+    "name": "sphere4",
     "type": "image",
-    "label": "Normal image for scene 2",
+    "label": "Sphere Image 4",
+    "importance": "high"
+  },
+  {
+    "name": "sphere1image1",
+    "type": "image",
+    "label": "Image 1 for sphere 1",
+    "importance": "high"
+  },
+  {
+    "name": "sphere2image1",
+    "type": "image",
+    "label": "Image 1 for sphere 2",
+    "importance": "high"
+  },
+  {
+    "name": "sphere2image2",
+    "type": "image",
+    "label": "Image 2 for sphere 2",
+    "importance": "high"
+  },
+  {
+    "name": "sphere2image3",
+    "type": "image",
+    "label": "Image 3 for sphere 2",
+    "importance": "high"
+  },
+  {
+    "name": "sphere3image1",
+    "type": "image",
+    "label": "Image 1 for sphere 3",
+    "importance": "high"
+  },
+  {
+    "name": "sphere3image2",
+    "type": "image",
+    "label": "Image 2 for sphere 3",
+    "importance": "high"
+  },
+  {
+    "name": "sphere3image3",
+    "type": "image",
+    "label": "Image 3 for sphere 3",
     "importance": "high"
   }
 ]

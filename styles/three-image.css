@@ -1,19 +1,76 @@
 .h5p-three-image {
 }
+
+
+.outer-nav-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: white;
+  width: 4.5em;
+  height: 4.5em;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
 .nav-button {
-  background: rgba(0,0,0,1);
-  color: greenyellow;
-  padding: 0.5em;
-  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: #fff;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+
+.nav-button-pulsar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 4.5em;
+  height: 4.5em;
+  border: 0.3em solid #fff;
+  border-radius: 50%;
+
   cursor: pointer;
 }
 
-.image-button {
-  background: rgba(0,0,0,1);
-  color: dodgerblue;
-  padding: 0.5em;
-  font-size: 3em;
-  cursor: pointer;
+.nav-button-pulsar:hover {
+  animation: nav-button-pulse 1.5s linear infinite;
+}
+
+@keyframes nav-button-pulse {
+  0% {
+    width: 4.5em;
+    height: 4.5em;
+    opacity: 1;
+  }
+
+  75% {
+    width: 5.5em;
+    height: 5.5em;
+    opacity: 0;
+  }
+
+  100% {
+    width: 5.5em;
+    height: 5.5em;
+    opacity: 0;
+  }
+}
+
+.nav-button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5em;
 }
 
 .h5p-image-popup {
@@ -22,14 +79,66 @@
   width: 100%;
   left: 0;
   top: 0;
+  background: black;
+}
+
+.h5p-image {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .h5p-close-button {
   position: absolute;
-  top: 0;
-  left: 0;
-  background: black;
-  color: white;
-  padding: 0.5em;
-  cursor: pointer;
+  left: 1em;
+  top: 0.75em;
+  width: 2em;
+  height: 2em;
+}
+
+.h5p-close-button .nav-button-pulsar,
+.h5p-close-button .outer-nav-button {
+  width: 2em;
+  height: 2em;
+}
+
+.h5p-close-button .nav-button-pulsar {
+  border: 0.15em solid #fff;
+}
+
+.h5p-close-button .nav-button {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.h5p-close-button .nav-button-icon {
+  width: 0.5em;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.h5p-close-button .nav-button-pulsar:hover {
+  animation: close-button-pulsars 1s linear infinite;
+}
+
+@keyframes close-button-pulsars {
+  0% {
+    width: 2em;
+    height: 2em;
+    opacity: 1;
+  }
+
+  75% {
+    width: 2.5em;
+    height: 2.5em;
+    opacity: 0;
+  }
+
+  100% {
+    width: 2.5em;
+    height: 2.5em;
+    opacity: 0;
+  }
 }
